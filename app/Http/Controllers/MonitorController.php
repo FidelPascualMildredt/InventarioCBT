@@ -64,8 +64,8 @@ class MonitorController extends Controller
     public function edit($id)
     {
         //
-        $monitor = Monitor::find($id);
-        return view('monitors.edit', compact('monitor'));
+        $monitors = Monitor::find($id);
+        return view('monitors.edit', compact('monitors'));
     }
 
     /**

@@ -26,7 +26,7 @@ class OrdenadorController extends Controller
      */
     public function create()
     {
-        //
+        
         return view('ordenadores.create');
     }
 
@@ -64,8 +64,8 @@ class OrdenadorController extends Controller
     public function edit($id)
     {
         //
-        $ordenador = Ordenador::find($id);
-        return view('ordenadores.edit', compact('ordenador'));
+        $ordenadors = Ordenador::find($id);
+        return view('ordenadores.edit', compact('ordenadors'));
     }
 
     /**
@@ -94,7 +94,7 @@ class OrdenadorController extends Controller
     {
         //
         $ordenador = Ordenador::find($id);
-        $ordenadors->delete();
-        return redirect('ordenadors')->with('mensaje', 'Ordenador borrado');
+        $ordenador->delete();
+        return redirect('ordenadores')->with('mensaje', 'Ordenador borrado');
     }
 }

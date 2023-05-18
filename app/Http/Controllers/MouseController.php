@@ -60,8 +60,8 @@ class MouseController extends Controller
      */
     public function edit($id)
     {
-        $mouse = Mouse::find($id);
-        return view('mouses.edit', compact('mouse'));
+        $mouses = Mouse::find($id);
+        return view('mouses.edit', compact('mouses'));
     }
 
     /**

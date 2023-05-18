@@ -1,5 +1,5 @@
 
-<form action="{{ url('/monitors/'.$monitor->id)}}" method="post" enctype="multipart/form-data">
+<form action="{{ url('/monitors/'.$monitors->id)}}" method="post" enctype="multipart/form-data">
 
 @csrf
 {{method_field('PATCH')}}

@@ -64,8 +64,8 @@ class KeyboardController extends Controller
     public function edit($id)
     {
         //
-        $keyboard = Keyboard::find($id);
-        return view('keyboards.edit', compact('keyboard'));
+        $keyboards = Keyboard::find($id);
+        return view('keyboards.edit', compact('keyboards'));
     }
 
     /**
@@ -80,7 +80,7 @@ class KeyboardController extends Controller
         //
         $datosKeyboards = $request->except(['_token', '_method']);
         Keyboard::where('id', $id)->update($datosKeyboards);
-        $mouses = Keyboard::findOrFail($id);
+        $keyboards = Keyboard::findOrFail($id);
         return view('keyboards.edit', compact('keyboards'));
     }
 
